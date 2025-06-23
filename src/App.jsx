@@ -746,13 +746,12 @@ Generated with ❤️ by Website Generator`
 
                     <div className="space-y-4">
                       <label className="block text-sm font-semibold text-slate-700">
-                        Theme Mode
+                        Website Theme
                       </label>
-                      <div className="flex items-center justify-between p-4 border border-slate-300 rounded-xl bg-slate-50">
-                        <div className="flex items-center space-x-3">
-                          <span className="text-2xl">☀️</span>
-                          <span className="font-medium text-slate-700">Light Mode</span>
-                        </div>
+                      <div className="flex items-center space-x-3">
+                        <span className="text-sm text-slate-600">
+                          {formData.darkMode ? 'Dark' : 'Light'}
+                        </span>
                         <label className="relative inline-flex items-center cursor-pointer">
                           <input
                             type="checkbox"
@@ -761,12 +760,8 @@ Generated with ❤️ by Website Generator`
                             onChange={handleInputChange}
                             className="sr-only peer"
                           />
-                          <div className="w-14 h-7 bg-slate-300 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-blue-600"></div>
+                          <div className="w-11 h-6 bg-slate-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-slate-800"></div>
                         </label>
-                        <div className="flex items-center space-x-3">
-                          <span className="font-medium text-slate-700">Dark Mode</span>
-                          <span className="text-2xl">🌙</span>
-                        </div>
                       </div>
                     </div>
                   </div>
