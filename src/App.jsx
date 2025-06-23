@@ -615,233 +615,440 @@ Generated with ❤️ by Website Generator`
   const isFormValid = formData.businessName.trim() && formData.description.trim()
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-2xl mx-auto p-8">
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <h1 className="text-3xl font-bold text-gray-800 mb-2 text-center">
-            Website Generator
-          </h1>
-          <p className="text-gray-600 text-center mb-8">
-            Create a professional website in seconds
-          </p>
-
-          <form className="space-y-6">
-            {/* Business Name */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Business Name *
-              </label>
-              <input
-                type="text"
-                name="businessName"
-                value={formData.businessName}
-                onChange={handleInputChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Enter your business name"
-                required
-              />
-            </div>
-
-            {/* Industry */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Industry
-              </label>
-              <select
-                name="industry"
-                value={formData.industry}
-                onChange={handleInputChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
-                {industries.map(industry => (
-                  <option key={industry} value={industry}>
-                    {industry}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            {/* Primary Color and Dark Mode Toggle */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {/* Primary Color */}
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+      {/* Header */}
+      <header className="bg-white/80 backdrop-blur-sm border-b border-slate-200 sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-6 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center">
+                <span className="text-white font-bold text-lg">W</span>
+              </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Primary Color
-                </label>
-                <div className="flex items-center space-x-3">
-                  <input
-                    type="color"
-                    name="primaryColor"
-                    value={formData.primaryColor}
-                    onChange={handleInputChange}
-                    className="w-12 h-12 border border-gray-300 rounded-lg cursor-pointer"
-                  />
-                  <input
-                    type="text"
-                    name="primaryColor"
-                    value={formData.primaryColor}
-                    onChange={handleInputChange}
-                    className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="#3B82F6"
-                  />
-                </div>
+                <h1 className="text-2xl font-bold bg-gradient-to-r from-slate-900 to-slate-600 bg-clip-text text-transparent">
+                  Website Generator
+                </h1>
+                <p className="text-sm text-slate-500">Professional websites in seconds</p>
+              </div>
+            </div>
+            <div className="hidden md:flex items-center space-x-2 text-sm text-slate-600">
+              <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full font-medium">✨ Live</span>
+              <span>Real-time preview</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div className="max-w-7xl mx-auto px-6 py-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          
+          {/* Left Column - Form */}
+          <div className="space-y-6">
+            <div className="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
+              {/* Form Header */}
+              <div className="bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-6 text-white">
+                <h2 className="text-2xl font-bold mb-2">Create Your Website</h2>
+                <p className="text-blue-100">Fill in your details to generate a professional website</p>
               </div>
 
-              {/* Dark Mode Toggle */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Theme Mode
-                </label>
-                <div className="flex items-center space-x-3 h-12">
-                  <span className="text-sm text-gray-600">☀️ Day</span>
-                  <label className="relative inline-flex items-center cursor-pointer">
+              <form className="p-8 space-y-8">
+                {/* Business Info Section */}
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-2 text-slate-700 font-semibold">
+                    <span className="w-6 h-6 bg-blue-100 text-blue-600 rounded-full text-sm flex items-center justify-center font-bold">1</span>
+                    <span>Business Information</span>
+                  </div>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-semibold text-slate-700 mb-3">
+                        Business Name <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        name="businessName"
+                        value={formData.businessName}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all bg-white text-slate-900 placeholder-slate-400"
+                        placeholder="Acme Corporation"
+                        required
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-semibold text-slate-700 mb-3">
+                        Industry
+                      </label>
+                      <select
+                        name="industry"
+                        value={formData.industry}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all bg-white text-slate-900"
+                      >
+                        {industries.map(industry => (
+                          <option key={industry} value={industry}>
+                            {industry}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-semibold text-slate-700 mb-3">
+                      Business Description <span className="text-red-500">*</span>
+                    </label>
+                    <textarea
+                      name="description"
+                      value={formData.description}
+                      onChange={handleInputChange}
+                      rows={4}
+                      className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all bg-white text-slate-900 placeholder-slate-400 resize-none"
+                      placeholder="Brief description of your business and services..."
+                      required
+                    />
+                  </div>
+                </div>
+
+                {/* Design Section */}
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-2 text-slate-700 font-semibold">
+                    <span className="w-6 h-6 bg-purple-100 text-purple-600 rounded-full text-sm flex items-center justify-center font-bold">2</span>
+                    <span>Design & Branding</span>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-4">
+                      <label className="block text-sm font-semibold text-slate-700">
+                        Primary Brand Color
+                      </label>
+                      <div className="flex items-center space-x-3">
+                        <input
+                          type="color"
+                          name="primaryColor"
+                          value={formData.primaryColor}
+                          onChange={handleInputChange}
+                          className="w-16 h-16 border-2 border-slate-300 rounded-xl cursor-pointer shadow-sm"
+                        />
+                        <div className="flex-1">
+                          <input
+                            type="text"
+                            name="primaryColor"
+                            value={formData.primaryColor}
+                            onChange={handleInputChange}
+                            className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all bg-white text-slate-900 font-mono"
+                            placeholder="#3B82F6"
+                          />
+                          <p className="text-xs text-slate-500 mt-1">Used for buttons, accents, and highlights</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="space-y-4">
+                      <label className="block text-sm font-semibold text-slate-700">
+                        Theme Mode
+                      </label>
+                      <div className="flex items-center justify-between p-4 border border-slate-300 rounded-xl bg-slate-50">
+                        <div className="flex items-center space-x-3">
+                          <span className="text-2xl">☀️</span>
+                          <span className="font-medium text-slate-700">Light Mode</span>
+                        </div>
+                        <label className="relative inline-flex items-center cursor-pointer">
+                          <input
+                            type="checkbox"
+                            name="darkMode"
+                            checked={formData.darkMode}
+                            onChange={handleInputChange}
+                            className="sr-only peer"
+                          />
+                          <div className="w-14 h-7 bg-slate-300 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-blue-600"></div>
+                        </label>
+                        <div className="flex items-center space-x-3">
+                          <span className="font-medium text-slate-700">Dark Mode</span>
+                          <span className="text-2xl">🌙</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Optional Title Color Section */}
+                <div className="border border-slate-200 rounded-xl p-4">
+                  <div className="flex items-center space-x-2 mb-3">
                     <input
                       type="checkbox"
-                      name="darkMode"
-                      checked={formData.darkMode}
+                      name="useTitleColor"
+                      checked={formData.useTitleColor}
                       onChange={handleInputChange}
-                      className="sr-only peer"
+                      className="w-4 h-4 text-blue-600 border-slate-300 rounded focus:ring-blue-500"
                     />
-                    <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
-                  </label>
-                  <span className="text-sm text-gray-600">🌙 Night</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Optional Title Color Section */}
-            <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
-              <h3 className="text-sm font-medium text-blue-800 mb-3">
-                📝 Optional: Custom Title Color
-              </h3>
-              <p className="text-xs text-blue-600 mb-4">
-                Override the primary color specifically for your business name/logo
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {/* Title Color */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Title Color
-                  </label>
-                  <div className="flex items-center space-x-3">
-                    <input
-                      type="color"
-                      name="titleColor"
-                      value={formData.titleColor || '#3B82F6'}
-                      onChange={handleInputChange}
-                      className="w-12 h-12 border border-gray-300 rounded-lg cursor-pointer"
-                    />
-                    <input
-                      type="text"
-                      name="titleColor"
-                      value={formData.titleColor}
-                      onChange={handleInputChange}
-                      className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="#FF6B6B (optional)"
-                    />
-                  </div>
-                </div>
-
-                {/* Use Title Color Toggle */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Enable Custom Title Color
-                  </label>
-                  <div className="flex items-center space-x-3 h-12">
-                    <label className="relative inline-flex items-center cursor-pointer">
-                      <input
-                        type="checkbox"
-                        name="useTitleColor"
-                        checked={formData.useTitleColor}
-                        onChange={handleInputChange}
-                        className="sr-only peer"
-                      />
-                      <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                    <label className="text-sm font-semibold text-slate-700">
+                      Use custom title color
                     </label>
-                    <span className="text-sm text-gray-600">
-                      {formData.useTitleColor ? 'Using custom color' : 'Using primary color'}
-                    </span>
                   </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Description */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Business Description *
-              </label>
-              <textarea
-                name="description"
-                value={formData.description}
-                onChange={handleInputChange}
-                rows={4}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Brief description of your business and services"
-                required
-              />
-            </div>
-
-            {/* Generate Button */}
-            <button
-              type="button"
-              onClick={downloadWebsite}
-              disabled={!isFormValid || isGenerating}
-              className={`w-full py-3 px-6 rounded-lg font-medium text-white transition-all ${
-                isFormValid && !isGenerating
-                  ? 'bg-blue-600 hover:bg-blue-700 hover:transform hover:scale-105'
-                  : 'bg-gray-400 cursor-not-allowed'
-              }`}
-            >
-              {isGenerating ? 'Generating Website...' : 'Generate & Download Website'}
-            </button>
-          </form>
-
-          {/* Preview */}
-          {formData.businessName && (
-            <div className="mt-8 p-4 bg-gray-50 rounded-lg">
-              <h3 className="font-medium text-gray-700 mb-2">Preview:</h3>
-              <div className="text-sm text-gray-600">
-                <div className="flex items-center flex-wrap mb-1">
-                  <div 
-                    className="w-4 h-4 rounded mr-2" 
-                    style={{ backgroundColor: formData.primaryColor }}
-                  ></div>
-                  <span className="font-medium mr-2">{formData.businessName}</span>
                   
-                  {/* Title Color Indicator */}
-                  {formData.useTitleColor && formData.titleColor && (
-                    <div className="flex items-center mr-2">
-                      <span className="text-xs text-gray-500 mr-1">Title:</span>
-                      <div 
-                        className="w-3 h-3 rounded mr-1" 
-                        style={{ backgroundColor: formData.titleColor }}
-                      ></div>
+                  {formData.useTitleColor && (
+                    <div className="flex items-center space-x-3">
+                      <input
+                        type="color"
+                        name="titleColor"
+                        value={formData.titleColor || '#3B82F6'}
+                        onChange={handleInputChange}
+                        className="w-10 h-10 border border-slate-300 rounded-lg cursor-pointer"
+                      />
+                      <input
+                        type="text"
+                        name="titleColor"
+                        value={formData.titleColor}
+                        onChange={handleInputChange}
+                        className="flex-1 px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all bg-white text-slate-900 font-mono text-sm"
+                        placeholder="#FF6B6B"
+                      />
                     </div>
                   )}
-                  
-                  <span className="mr-2 text-xs bg-gray-200 px-2 py-1 rounded">
-                    {formData.darkMode ? '🌙 Night' : '☀️ Day'} Mode
-                  </span>
-                  <span className="mr-2 text-xs px-2 py-1 rounded" style={{
-                    backgroundColor: formData.primaryColor,
-                    color: getTextColor(formData.primaryColor)
-                  }}>
-                    Smart Text: {getTextColor(formData.primaryColor) === '#ffffff' ? 'White' : 'Black'}
-                  </span>
                 </div>
-                <p>Industry: {formData.industry}</p>
-                <p>Title Color: {formData.useTitleColor && formData.titleColor ? 
-                  `Custom (${formData.titleColor})` : 
-                  `Primary Color (${formData.primaryColor})`
-                }</p>
-                {formData.description && (
-                  <p className="mt-1 italic">"{formData.description}"</p>
+
+                {/* Generate Button */}
+                <div className="pt-4">
+                  <button
+                    type="button"
+                    onClick={downloadWebsite}
+                    disabled={!isFormValid || isGenerating}
+                    className={`w-full py-4 px-6 rounded-xl font-bold text-lg transition-all transform ${
+                      isFormValid && !isGenerating
+                        ? 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl hover:scale-105'
+                        : 'bg-slate-300 text-slate-500 cursor-not-allowed'
+                    }`}
+                  >
+                    {isGenerating ? (
+                      <div className="flex items-center justify-center space-x-2">
+                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                        <span>Generating Website...</span>
+                      </div>
+                    ) : (
+                      <div className="flex items-center justify-center space-x-2">
+                        <span>🚀</span>
+                        <span>Generate & Download Website</span>
+                      </div>
+                    )}
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          {/* Right Column - Preview */}
+          <div className="space-y-6">
+            <div className="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden sticky top-24">
+              {/* Preview Header */}
+              <div className="bg-gradient-to-r from-emerald-600 to-teal-600 px-8 py-6 text-white">
+                <h2 className="text-2xl font-bold mb-2">Live Preview</h2>
+                <p className="text-emerald-100">See your website come to life</p>
+              </div>
+
+              <div className="p-8">
+                {formData.businessName ? (
+                  <div className="space-y-6">
+                    {/* Website Preview Card */}
+                    <div className="border-2 border-dashed border-slate-300 rounded-xl p-6 bg-slate-50">
+                      <div className="flex items-center space-x-3 mb-4">
+                        <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+                        <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                        <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                        <div className="flex-1 bg-slate-200 rounded-full h-6 flex items-center px-3">
+                          <span className="text-xs text-slate-500">
+                            {formData.businessName.toLowerCase().replace(/\s+/g, '')}.com
+                          </span>
+                        </div>
+                      </div>
+                      
+                      <div 
+                        className="rounded-lg overflow-hidden shadow-sm border"
+                        style={{ 
+                          backgroundColor: formData.darkMode ? '#1a1a1a' : '#ffffff',
+                          borderColor: formData.darkMode ? '#404040' : '#e5e7eb'
+                        }}
+                      >
+                        {/* Mini navbar */}
+                        <div 
+                          className="border-b px-4 py-2 flex items-center justify-between"
+                          style={{ 
+                            backgroundColor: formData.darkMode ? '#2d2d2d' : '#ffffff',
+                            borderBottomColor: formData.darkMode ? '#404040' : '#e5e7eb'
+                          }}
+                        >
+                          <div 
+                            className="font-bold text-sm"
+                            style={{ color: formData.useTitleColor && formData.titleColor ? formData.titleColor : formData.primaryColor }}
+                          >
+                            {formData.businessName}
+                          </div>
+                          <div className="flex space-x-2 text-xs" style={{ color: formData.darkMode ? '#cccccc' : '#6b7280' }}>
+                            <span>Home</span>
+                            <span>About</span>
+                            <span>Services</span>
+                          </div>
+                        </div>
+                        
+                        {/* Mini hero section */}
+                        <div 
+                          className="px-4 py-6 text-center text-white"
+                          style={{ 
+                            background: `linear-gradient(135deg, ${formData.primaryColor}, ${formData.primaryColor}dd)`,
+                            color: getTextColor(formData.primaryColor)
+                          }}
+                        >
+                          <h3 className="font-bold text-sm mb-1">Welcome to {formData.businessName}</h3>
+                          <p className="text-xs opacity-90">Professional {formData.industry} services</p>
+                        </div>
+                        
+                        {/* Mini content sections */}
+                        <div className="p-4 space-y-3">
+                          <div 
+                            className="h-2 rounded w-3/4"
+                            style={{ backgroundColor: formData.darkMode ? '#404040' : '#e5e7eb' }}
+                          ></div>
+                          <div 
+                            className="h-2 rounded w-1/2"
+                            style={{ backgroundColor: formData.darkMode ? '#404040' : '#e5e7eb' }}
+                          ></div>
+                          <div className="grid grid-cols-3 gap-2 mt-3">
+                            <div 
+                              className="h-8 rounded"
+                              style={{ backgroundColor: formData.darkMode ? '#333333' : '#f1f5f9' }}
+                            ></div>
+                            <div 
+                              className="h-8 rounded"
+                              style={{ backgroundColor: formData.darkMode ? '#333333' : '#f1f5f9' }}
+                            ></div>
+                            <div 
+                              className="h-8 rounded"
+                              style={{ backgroundColor: formData.darkMode ? '#333333' : '#f1f5f9' }}
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Preview Details */}
+                    <div className="space-y-4">
+                      <div className="flex items-center justify-between p-4 bg-slate-50 rounded-xl">
+                        <span className="text-sm font-medium text-slate-700">Business Name</span>
+                        <span className="text-sm text-slate-900 font-semibold">{formData.businessName}</span>
+                      </div>
+                      
+                      <div className="flex items-center justify-between p-4 bg-slate-50 rounded-xl">
+                        <span className="text-sm font-medium text-slate-700">Industry</span>
+                        <span className="text-sm text-slate-900">{formData.industry}</span>
+                      </div>
+                      
+                      <div className="flex items-center justify-between p-4 bg-slate-50 rounded-xl">
+                        <span className="text-sm font-medium text-slate-700">Theme</span>
+                        <div className="flex items-center space-x-2">
+                          <span className="text-sm text-slate-900">
+                            {formData.darkMode ? '🌙 Dark' : '☀️ Light'}
+                          </span>
+                        </div>
+                      </div>
+                      
+                      <div className="p-4 bg-slate-50 rounded-xl">
+                        <div className="flex items-center justify-between mb-3">
+                          <span className="text-sm font-medium text-slate-700">Colors</span>
+                        </div>
+                        <div className="flex items-center space-x-4">
+                          <div className="flex items-center space-x-2">
+                            <div 
+                              className="w-6 h-6 rounded-lg border-2 border-white shadow-sm" 
+                              style={{ backgroundColor: formData.primaryColor }}
+                            ></div>
+                            <div>
+                              <p className="text-xs font-medium text-slate-700">Primary</p>
+                              <p className="text-xs text-slate-500">{formData.primaryColor}</p>
+                            </div>
+                          </div>
+                          
+                          {formData.useTitleColor && formData.titleColor && (
+                            <div className="flex items-center space-x-2">
+                              <div 
+                                className="w-6 h-6 rounded-lg border-2 border-white shadow-sm" 
+                                style={{ backgroundColor: formData.titleColor }}
+                              ></div>
+                              <div>
+                                <p className="text-xs font-medium text-slate-700">Title</p>
+                                <p className="text-xs text-slate-500">{formData.titleColor}</p>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+
+                      <div className="p-4 bg-slate-50 rounded-xl">
+                        <span className="text-sm font-medium text-slate-700 block mb-2">Smart Text Contrast</span>
+                        <div className="flex items-center space-x-2">
+                          <span 
+                            className="px-3 py-1 rounded-full text-xs font-medium"
+                            style={{
+                              backgroundColor: formData.primaryColor,
+                              color: getTextColor(formData.primaryColor)
+                            }}
+                          >
+                            {getTextColor(formData.primaryColor) === '#ffffff' ? 'White Text' : 'Black Text'}
+                          </span>
+                          <span className="text-xs text-slate-500">Auto-calculated for accessibility</span>
+                        </div>
+                      </div>
+                      
+                      {formData.description && (
+                        <div className="p-4 bg-slate-50 rounded-xl">
+                          <span className="text-sm font-medium text-slate-700 block mb-2">Description</span>
+                          <p className="text-sm text-slate-600 italic">"{formData.description}"</p>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Features List */}
+                    <div className="border-t pt-6">
+                      <h4 className="font-semibold text-slate-700 mb-4">Your website will include:</h4>
+                      <div className="grid grid-cols-2 gap-3 text-xs">
+                        <div className="flex items-center space-x-2">
+                          <span className="text-green-500">✓</span>
+                          <span className="text-slate-600">Responsive Design</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <span className="text-green-500">✓</span>
+                          <span className="text-slate-600">Contact Form</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <span className="text-green-500">✓</span>
+                          <span className="text-slate-600">Hero Section</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <span className="text-green-500">✓</span>
+                          <span className="text-slate-600">Services Grid</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <span className="text-green-500">✓</span>
+                          <span className="text-slate-600">About Section</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <span className="text-green-500">✓</span>
+                          <span className="text-slate-600">SEO Ready</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="text-center py-12">
+                    <div className="w-24 h-24 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-4xl text-slate-400">🌐</span>
+                    </div>
+                    <h3 className="text-lg font-semibold text-slate-700 mb-2">Ready to Create</h3>
+                    <p className="text-slate-500">Enter your business details to see a preview</p>
+                  </div>
                 )}
               </div>
             </div>
-          )}
+          </div>
         </div>
       </div>
     </div>

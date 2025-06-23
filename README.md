@@ -1,21 +1,21 @@
-# 🌐 Website Generator
+# Website Generator
 
 A powerful, instant website generator that creates professional, responsive websites from basic client information. Built with React and Vite for lightning-fast development and generation.
 
-## ✨ Features
+## Features
 
-### 🎨 **Customizable Design**
+### Customizable Design
 - **Primary Color Selection**: Choose your brand color with visual color picker
 - **Optional Title Color Override**: Separate color control for business name/logo
 - **Day/Night Mode**: Toggle between light and dark themes
 - **Smart Text Contrast**: Automatically calculates optimal text colors for accessibility
 
-### 🏢 **Business Information**
+### Business Information
 - Business name and industry selection (10+ industries)
 - Custom business description
 - Professional contact information generation
 
-### 📱 **Generated Website Features**
+### Generated Website Features
 - **Fully Responsive Design**: Mobile-first approach with perfect tablet/desktop scaling
 - **Modern Navigation**: Fixed navbar with smooth scrolling
 - **Hero Section**: Eye-catching banner with business information
@@ -24,14 +24,14 @@ A powerful, instant website generator that creates professional, responsive webs
 - **Contact Form**: Functional contact form with validation
 - **Interactive JavaScript**: Smooth animations and form handling
 
-### 📦 **Download Package**
+### Download Package
 Each generated website includes:
 - `index.html` - Complete website structure
 - `styles.css` - Custom styling with user's color scheme
 - `script.js` - Interactive features and functionality
 - `README.md` - Deployment instructions and project details
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Node.js (v14 or higher)
@@ -65,7 +65,7 @@ npm run dev
 4. Click "Generate & Download Website" 
 5. Extract the ZIP file and deploy to any web hosting service
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 - **Frontend Framework**: React 18
 - **Build Tool**: Vite 3.x
@@ -73,7 +73,7 @@ npm run dev
 - **File Generation**: JSZip
 - **Development**: Hot reload with Vite dev server
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 website-generator/
@@ -88,7 +88,7 @@ website-generator/
 └── README.md           # Project documentation
 ```
 
-## 🎯 Generated Website Features
+## Generated Website Features
 
 ### Responsive Design
 - Mobile-first CSS with breakpoints
@@ -113,7 +113,7 @@ website-generator/
 - Fast loading times
 - Mobile-friendly design
 
-## 🔧 Development
+## Development
 
 ### Available Scripts
 ```bash
@@ -140,7 +140,7 @@ Modify the generation functions in `App.jsx`:
 - `generateCSS()` - Styling and themes
 - `generateJS()` - Interactive features
 
-## 🚀 Deployment
+## Deployment
 
 ### Deploy the Generator
 1. Build the project: `npm run build`
@@ -152,7 +152,7 @@ Modify the generation functions in `App.jsx`:
 2. Upload all files to web hosting
 3. No additional setup required - websites are self-contained
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch: `git checkout -b feature-name`
@@ -160,23 +160,23 @@ Modify the generation functions in `App.jsx`:
 4. Push to branch: `git push origin feature-name`
 5. Submit a pull request
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Built with React and Vite for optimal performance
 - Tailwind CSS for rapid UI development
 - JSZip for seamless file packaging
 - Color contrast calculations for accessibility
 
-## 📧 Support
+## Support
 
 For support, feature requests, or bug reports, please open an issue on GitHub.
 
 ---
 
-**Made with ❤️ by [Your Name]**
+**Made with care by [Your Name]**
 
 *Generate professional websites in seconds!* 
